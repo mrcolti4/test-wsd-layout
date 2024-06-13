@@ -1,15 +1,12 @@
 @import "fonts.scss";
-body {
-    font-family: 'BriosoPro Italic';
-    font-size: 30;
+@import "vars.scss";
+@import "common.scss";
+
+html {
+  box-sizing: border-box;
 }
-@media (max-width: 768px) {
-    span {
-        font-size: 20px;
-    }
-}
-@media (max-width: 768px) {
-    body {
-        background-color: green;
-    }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }

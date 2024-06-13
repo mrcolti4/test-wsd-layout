@@ -1,14 +1,28 @@
 @font-face{
-	font-family: BriosoPro Italic;
+	font-family: Montserrat;
 	font-display: swap;
-	src: url("../fonts/BriosoPro Italic.woff2") format("woff2"), url("../fonts/BriosoPro Italic.woff") format("woff");
+	src: url("../fonts/Montserrat-Italic.woff2") format("woff2"), url("../fonts/Montserrat-Italic.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face{
-	font-family: Joan;
+	font-family: Italiana;
 	font-display: swap;
-	src: url("../fonts/Joan-Regular.woff2") format("woff2"), url("../fonts/Joan-Regular.woff") format("woff");
+	src: url("../fonts/Italiana-Regular.woff2") format("woff2"), url("../fonts/Italiana-Regular.woff") format("woff");
 	font-weight: 400;
+	font-style: normal;
+}
+@font-face{
+	font-family: Montserrat;
+	font-display: swap;
+	src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face{
+	font-family: Montserrat;
+	font-display: swap;
+	src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+	font-weight: 300;
 	font-style: normal;
 }

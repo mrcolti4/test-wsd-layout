@@ -1,0 +1,122 @@
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Italic.woff2") format("woff2"), url("../fonts/Montserrat-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Italiana;
+  font-display: swap;
+  src: url("../fonts/Italiana-Regular.woff2") format("woff2"), url("../fonts/Italiana-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+.container {
+  max-width: 1920px;
+  padding: 0 60px;
+}
+
+.heading {
+  font-family: "Italiana", sans-serif;
+  letter-spacing: 0.04em;
+}
+.heading-1 {
+  font-size: 90px;
+  line-height: 1.1777777778;
+}
+.heading-2 {
+  font-size: 70px;
+  line-height: 1.1714285714;
+}
+
+.text {
+  font-family: "Montserrat", serif;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+.text-italic-large {
+  font-size: 18px;
+  line-height: 1.5;
+  font-style: italic;
+}
+.text-bold {
+  font-weight: 600;
+}
+.text-text {
+  font-weight: 300;
+}
+.text-text-small {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.btn {
+  box-sizing: border-box;
+  background-color: #69ae96;
+  padding: 20px 61px;
+  border-radius: 41px;
+  border: none;
+  color: #fff;
+  box-shadow: 0 12px 24px 0 rgba(44, 39, 56, 0.08);
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: #3b7a64;
+}
+.btn:focus {
+  outline: solid 2px #3b7a64;
+  box-shadow: 0 0 0 0 #2c2738;
+}
+.btn:disabled {
+  background-color: #e5e5e5;
+  color: #bbb9b9;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.btn-arrow {
+  padding: 20px 24px;
+  border: solid 1px #e7e7e7;
+  background-color: #fff;
+  border-radius: 100%;
+}
+.btn-arrow:hover {
+  cursor: pointer;
+  background-color: #69ae96;
+}
+.btn-arrow:focus {
+  outline: solid 2px #3b7a64;
+  box-shadow: 0 0 0 0 #2c2738;
+  background-color: #69ae96;
+}
+.btn-arrow:disabled {
+  background-color: #e5e5e5;
+  color: #bbb9b9;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
