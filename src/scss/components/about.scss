@@ -10,6 +10,7 @@
   }
   &__descr {
     width: 60%;
+    padding: 20px 0;
   }
   &__heading {
     margin-bottom: 20px;
@@ -18,5 +19,21 @@
     color: #1f1f1f;
   }
   &__img {
+    width: 50%;
+  }
+  @media screen and (max-width: 992px) {
+    .about {
+      &__content {
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 20px;
+      }
+      &__descr {
+        width: 100%;
+      }
+      &__img {
+        width: 100%;
+      }
+    }
   }
 }
