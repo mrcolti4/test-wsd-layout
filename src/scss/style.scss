@@ -1,11 +1,12 @@
 @import "fonts.scss";
-@import "swiper-bundle.min.scss";
-@import "normalize.scss";
+@import "lib/normalize.scss";
+@import "lib/swiper-bundle.min.scss";
 @import "vars.scss";
 @import "common.scss";
 @import "components/header.scss";
 @import "components/hero.scss";
 @import "components/about.scss";
+@import "components/feedback.scss";
 
 html {
   box-sizing: border-box;

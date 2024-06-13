@@ -1,0 +1,69 @@
+.feedback {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  &__content {
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.swiper {
+  &__buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  &-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-button-prev-unique {
+    transform: rotateY(-180deg);
+  }
+  &-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
+  &-pagination-bullet-active {
+    background: $accent_color;
+  }
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1170px;
+  margin: 62px 0 60px;
+  padding: 30px 40px 30px 30px;
+  border-radius: 10px;
+  background-color: #f5f9fa;
+  gap: 50px;
+  &__img {
+    flex: 45%;
+  }
+  &__descr {
+    flex: 45%;
+  }
+  &__text {
+    margin-bottom: 20px;
+  }
+  &__info {
+  }
+  &__name {
+    margin-bottom: 10px;
+  }
+  &__job-title {
+    font-size: 14px;
+    line-height: calc(21 / 14);
+    font-weight: 300;
+  }
+}
+.swiper-slide {
+  width: fit-content;
+}

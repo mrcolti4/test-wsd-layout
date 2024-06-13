@@ -49,7 +49,7 @@ h6 {
 .text {
   letter-spacing: 0;
   line-height: calc(24 / 16);
-  &-italic-large {
+  &-italic {
     font-size: 18px;
     line-height: calc(27 / 18);
     font-style: italic;
@@ -91,13 +91,18 @@ h6 {
 }
 
 .btn-arrow {
-  padding: 20px 24px;
+  width: 60px;
+  height: 60px;
   border: solid 1px #e7e7e7;
   background-color: #fff;
   border-radius: 100%;
+  transition: .3s all;
   &:hover {
     cursor: pointer;
     background-color: $accent_color;
+    svg {
+      fill: #fff;
+    }
   }
   &:focus {
     outline: solid 2px $btn-focus-color;

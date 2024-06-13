@@ -1,6 +1,15 @@
 .hero {
+  background-color: #f1f6f8;
+  &-container {
+    min-height: 970px;
+    position: relative;
+    overflow: hidden;
+  }
   &__content {
     padding: 178px 140px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   &__descr {
     width: 542px;
@@ -16,5 +25,8 @@
   &__btn {
   }
   &__img {
+    position: absolute;
+    right: 0;
+    bottom: -30%;
   }
 }
