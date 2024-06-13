@@ -1,0 +1,18 @@
+.about {
+  padding-top: 100px;
+  &__content {
+    padding: 0 100px;
+    display: flex;
+    gap: 103.5px;
+  }
+  &__descr {
+  }
+  &__heading {
+    margin-bottom: 20px;
+  }
+  &__text {
+    color: #1f1f1f;
+  }
+  &__img {
+  }
+}

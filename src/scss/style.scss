@@ -1,6 +1,10 @@
 @import "fonts.scss";
+@import "normalize.scss";
 @import "vars.scss";
 @import "common.scss";
+@import "components/header.scss";
+@import "components/hero.scss";
+@import "components/about.scss";
 
 html {
   box-sizing: border-box;
@@ -9,4 +13,6 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
