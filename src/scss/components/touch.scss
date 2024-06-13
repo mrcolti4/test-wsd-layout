@@ -1,26 +1,62 @@
 .touch {
-}
-.container {
-}
-.touch__descr {
-}
-.touch__heading {
-}
-.heading {
-}
-.heading-2 {
-}
-.touch__email {
-}
-.touch__form {
+  padding: 120px 0;
+  background-color: #f5f9fa;
+  &__container {
+    display: grid;
+  }
+  &__descr {
+    display: grid;
+    grid-column: 2;
+  }
+  &__heading {
+    margin-bottom: auto;
+    grid-row: 1;
+  }
+  &__info {
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    align-self: end;
+  }
+  &__email {
+    color: $accent_color;
+  }
+  &__address {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    color: #1f1f1f;
+  }
 }
 .form {
-}
-.form__input {
-}
-.btn {
-}
-.form__btn {
-}
-.form__icon {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 570px;
+  grid-column: 4;
+  &__input {
+    border-radius: 6px;
+    border: solid 1px #c9ccd4;
+    padding: 18px 0 18px 24px;
+  }
+  &__textarea {
+    resize: none;
+    height: 132px;
+  }
+  &__btn {
+    max-width: 288px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  &__icon {
+    fill: white;
+  }
 }
