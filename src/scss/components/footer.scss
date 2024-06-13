@@ -1,0 +1,17 @@
+.footer {
+    padding: 106px 0 100px;
+    text-align: center;
+  &__logo {
+    margin-bottom: 46px;
+  }
+  &__navigation {
+    margin-bottom: 40px;
+  }
+  &__menu {
+    .menu__link {
+      color: #1f1f1f;
+    }
+  }
+  &__copyrights {
+  }
+}

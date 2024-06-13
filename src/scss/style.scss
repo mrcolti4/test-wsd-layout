@@ -3,11 +3,7 @@
 @import "lib/swiper-bundle.min.scss";
 @import "vars.scss";
 @import "common.scss";
-@import "components/header.scss";
-@import "components/hero.scss";
-@import "components/about.scss";
-@import "components/feedback.scss";
-@import "components/touch.scss";
+@import "components/index";
 
 html {
   box-sizing: border-box;
