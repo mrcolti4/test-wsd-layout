@@ -38,6 +38,12 @@ img {
   color: #69ae96;
 }
 
+.lock {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 .heading {
   font-family: "Italiana", sans-serif;
   letter-spacing: 0.04em;
@@ -92,7 +98,7 @@ img {
   border: none;
   color: #fff;
   box-shadow: 0 12px 24px 0 rgba(44, 39, 56, 0.08);
-  transition: .3s all;
+  transition: 0.3s all;
   &:hover {
     cursor: pointer;
     background-color: $btn-focus-color;
@@ -115,7 +121,7 @@ img {
   border: solid 1px #e7e7e7;
   background-color: #fff;
   border-radius: 100%;
-  transition: .3s all;
+  transition: 0.3s all;
   &:hover {
     cursor: pointer;
     background-color: $accent_color;
