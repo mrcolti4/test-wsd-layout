@@ -57,6 +57,11 @@
         }
       }
     }
+    .submenu {
+      &__link {
+        color: $dark;
+      }
+    }
   }
   &__icon {
     display: none;

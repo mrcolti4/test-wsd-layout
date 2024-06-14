@@ -1,29 +1,3 @@
-const openMenu = () => {
-  subMenu.classList.add("_active");
-};
-const closeMenu = () => {
-  subMenu.classList.remove("_active");
-};
-const toggleMenu = () => {
-  subMenu.classList.toggle("_active");
-};
-
-function setListenerOnMenu(deviceWidth, menuItems, menuButton) {
-  if (deviceWidth > 992) {
-    menuItems.forEach((item) => {
-      if (item.children.length > 1) {
-        item.removeEventListener("mouseenter", openMenu);
-        item.removeEventListener("mouseleave", closeMenu);
-        item.addEventListener("mouseenter", openMenu);
-        item.addEventListener("mouseleave", closeMenu);
-      }
-    });
-  } else {
-    menuButton.removeEventListener("click", toggleMenu);
-    menuButton.addEventListener("click", toggleMenu);
-  }
-}
-
 // Script for sticky header
 window.addEventListener("scroll", () => {
   const header = document.querySelector("header.header");
@@ -40,15 +14,47 @@ menuIcon.addEventListener("click", (e) => {
 });
 
 // Script for submenu
-let deviceWidth = window.innerWidth;
-const subMenu = document.querySelector("ul.header__submenu");
-const menuItems = document.querySelectorAll("li.menu__item");
-const menuButton = document.querySelector("button.menu__button");
+(() => {
+  const subMenu = document.querySelector("ul.header__submenu");
+  const menuItems = document.querySelectorAll("li.menu__item");
+  const menuButton = document.querySelector("button.menu__button");
+  let buttonListItem;
 
-setListenerOnMenu(deviceWidth, menuItems, menuButton);
+  const openMenu = () => {
+    subMenu.classList.add("_active");
+  };
+  const closeMenu = () => {
+    subMenu.classList.remove("_active");
+  };
+  const toggleMenu = () => {
+    subMenu.classList.toggle("_active");
+  };
 
-// Listen window resize for change behaviour on mobile and desktop sizes
-window.addEventListener("resize", () => {
-  deviceWidth = window.innerWidth;
-  setListenerOnMenu(deviceWidth, menuItems, menuButton);
-});
+  // If window width more than 992 open menu on hover, else on click
+  if (window.innerWidth > 992) {
+    menuItems.forEach((item) => {
+      if (item.children.length > 1) {
+        buttonListItem = item;
+        item.addEventListener("mouseenter", openMenu);
+        item.addEventListener("mouseleave", closeMenu);
+      }
+    });
+  } else {
+    menuButton.removeEventListener("click", toggleMenu);
+    menuButton.addEventListener("click", toggleMenu);
+  }
+
+  // if e.matches returns true that means window on 992px screen width
+  // so we implement hover behaivour for submenu
+  window.matchMedia("(min-width: 992px)").addEventListener("change", (e) => {
+    if (e.matches) {
+      menuButton.removeEventListener("click", toggleMenu);
+      buttonListItem.addEventListener("mouseenter", openMenu);
+      buttonListItem.addEventListener("mouseleave", closeMenu);
+    } else {
+      menuButton.addEventListener("click", toggleMenu);
+      buttonListItem.removeEventListener("mouseenter", openMenu);
+      buttonListItem.removeEventListener("mouseleave", closeMenu);
+    }
+  });
+})();
