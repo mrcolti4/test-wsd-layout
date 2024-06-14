@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.min.css" />
-    <title>Document</title>
+    <title>John Doe - Superstar SEO</title>
   </head>
   <body>
-    @@include("html/hero.html", {}) 
-    @@include("html/about.html", {})
-    @@include("html/feedback.html", {})
-    @@include("html/touch.html", {})
+    @@include("html/header.html", {})
+    <main class="page">
+      @@include("html/hero.html", {}) @@include("html/about.html", {})
+      @@include("html/feedback.html", {}) @@include("html/touch.html", {})
+    </main>
     @@include("html/footer.html", {})
     <script src="js/app.min.js"></script>
   </body>
