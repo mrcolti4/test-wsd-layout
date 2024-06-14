@@ -7,15 +7,20 @@ const formSchema = object().shape({
 });
 
 const form = document.querySelector("form.touch__form");
+let errorBlock;
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-
   const name = form[0].value;
   const email = form[1].value;
   const message = form[2].value;
 
-  const errObj = {
+  if (errorBlock) {
+    errorBlock.remove();
+    errorBlock = null;
+  }
+
+  let errObj = {
     name: null,
     message: "",
   };
@@ -30,6 +35,17 @@ form.addEventListener("submit", async (e) => {
       errObj.name = err.path;
       errObj.message = err.errors[0];
     });
-  console.log(errObj);
-  console.log(result);
+
+  if (result) errObj = {};
+
+  if (errObj.name) {
+    errorBlock = document.createElement("p");
+    errorBlock.classList.add("form__error");
+    errorBlock.innerHTML = `${errObj.message}`;
+
+    const targetInput = form.querySelector(`input[name=${errObj.name}]`);
+    targetInput.parentNode.insertBefore(errorBlock, targetInput.nextSibling);
+  } else {
+    form.reset();
+  }
 });

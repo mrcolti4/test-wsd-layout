@@ -1687,6 +1687,10 @@ img {
   box-shadow: 0 0 0 2px #69ae96;
   border: solid 1px #3b7a64;
 }
+.form__error {
+  color: red;
+  font-weight: 600;
+}
 .form__btn {
   width: 288px;
   margin-top: 10px;
