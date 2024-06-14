@@ -107,7 +107,8 @@ img {
   }
   &:focus {
     outline: solid 2px $btn-focus-color;
-    box-shadow: 0 0 0 0 #2c2738;
+    background-color: $accent_color;
+    box-shadow: 0 0 0 4px #69ae96;
   }
   &:disabled {
     background-color: #e5e5e5;
@@ -134,9 +135,9 @@ img {
     }
   }
   &:focus {
-    outline: solid 2px $btn-focus-color;
-    box-shadow: 0 0 0 0 #2c2738;
+    border: solid 2px $btn-focus-color;
     background-color: $accent_color;
+    box-shadow: 0 0 0 4px #69ae96;
   }
   &:disabled {
     background-color: #e5e5e5;

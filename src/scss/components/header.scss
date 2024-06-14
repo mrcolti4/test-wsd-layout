@@ -50,6 +50,13 @@
   }
   &.sticky {
     background-color: $half_dark;
+    .menu {
+      @media screen and (min-width: 992px) {
+        &__link {
+          color: #fff;
+        }
+      }
+    }
   }
   &__icon {
     display: none;

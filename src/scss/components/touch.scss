@@ -60,6 +60,15 @@
     resize: none;
     height: 132px;
   }
+  input,
+  textarea {
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px #69ae96;
+      border: solid 1px #3b7a64;
+
+    }
+  }
   &__btn {
     width: 288px;
     margin-top: 10px;
