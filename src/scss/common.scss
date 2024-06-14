@@ -99,9 +99,11 @@ img {
   color: #fff;
   box-shadow: 0 12px 24px 0 rgba(44, 39, 56, 0.08);
   transition: 0.3s all;
-  &:hover {
-    cursor: pointer;
-    background-color: $btn-focus-color;
+  @media screen and (min-width: 992px) {
+    &:hover {
+      cursor: pointer;
+      background-color: $btn-focus-color;
+    }
   }
   &:focus {
     outline: solid 2px $btn-focus-color;
@@ -122,11 +124,13 @@ img {
   background-color: #fff;
   border-radius: 100%;
   transition: 0.3s all;
-  &:hover {
-    cursor: pointer;
-    background-color: $accent_color;
-    svg {
-      fill: #fff;
+  @media screen and (min-width: 992px) {
+    &:hover {
+      cursor: pointer;
+      background-color: $accent_color;
+      svg {
+        fill: #fff;
+      }
     }
   }
   &:focus {
