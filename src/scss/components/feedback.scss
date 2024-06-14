@@ -1,6 +1,8 @@
 .feedback {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 120px 0;
+  @media screen and (max-width: 992px) {
+    padding: 60px 0;
+  }
   &__content {
   }
   &__wrapper {
@@ -16,6 +18,9 @@
     gap: 20px;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
   &-button {
     display: flex;
@@ -35,20 +40,25 @@
 }
 
 .slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1170px;
-  margin: 62px 0 60px;
-  padding: 30px 40px 30px 30px;
-  border-radius: 10px;
-  background-color: #f5f9fa;
-  gap: 50px;
+  &__content {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1170px;
+    margin: 62px auto 60px;
+    padding: 30px 40px 30px 30px;
+    border-radius: 10px;
+    background-color: #f5f9fa;
+    gap: 50px;
+  }
   &__img {
-    flex: 45%;
+    max-width: 550px;
+    width: 50%;
   }
   &__descr {
-    flex: 45%;
+    max-width: 500px;
+    width: 50%;
   }
   &__text {
     margin-bottom: 20px;
@@ -63,7 +73,21 @@
     line-height: calc(21 / 14);
     font-weight: 300;
   }
+  @media screen and (max-width: 992px) {
+    &__content {
+      flex-direction: column;
+      text-align: center;
+    }
+    &__img {
+      width: 100%;
+    }
+    &__descr {
+      width: 100%;
+      max-width: none;
+    }
+  }
 }
 .swiper-slide {
   width: fit-content;
+  margin: 0 auto;
 }

@@ -1,8 +1,11 @@
 .footer {
     padding: 106px 0 100px;
     text-align: center;
+  @media screen and (max-width: 992px) {
+    padding: 50px 0;
+  }
   &__logo {
-    margin-bottom: 46px;
+    margin: 0 auto 46px;
   }
   &__navigation {
     margin-bottom: 40px;
