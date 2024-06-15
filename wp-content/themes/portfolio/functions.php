@@ -39,18 +39,49 @@ function themename_custom_logo_setup()
 	add_theme_support('custom-logo', $defaults);
 }
 // Add navigation menu support
-add_theme_support("menus");
+function register_my_menus()
+{
+	register_nav_menus(
+		array(
+			'header-menu' => __('Header Menu'),
+			'footer-menu' => __('Footer Menu')
+		)
+	);
+}
+add_action('init', 'register_my_menus');
+function my_nav_menu_submenu_css_class($classes)
+{
+	$classes[] = 'header__submenu submenu';
+	return $classes;
+}
+add_filter('nav_menu_submenu_css_class', 'my_nav_menu_submenu_css_class');
+// Function to add custom class for submenu
+function custom_add_submenu_class($classes)
+{
+
+	if (in_array('menu-item-has-children', $classes)) {
+		$classes[] = 'menu__button';
+	}
+	return $classes;
+}
+add_filter('nav_menu_css_class', 'custom_add_submenu_class', 10, 1);
+
 add_filter('nav_menu_link_attributes', "filter_nav_menu_link_attributes", 10, 3);
-function filter_nav_menu_link_attributes($atts, $item, $args) {
-	if($args->menu->name === "Header menu") {
+function filter_nav_menu_link_attributes($atts, $item, $args)
+{
+	if ($args->menu->name === "Header menu") {
 		$atts['class'] = 'menu__link';
-	};
+	}
+	;
 	return $atts;
 }
+add_theme_support("widgets");
+add_theme_support('widgets-block-editor');
 
 // Add custom class to form wrapper
-function custom_form_class_attr($class) {
-    $class .= ' form';
-    return $class;
+function custom_form_class_attr($class)
+{
+	$class .= ' form';
+	return $class;
 }
 add_filter('wpcf7_form_class_attr', 'custom_form_class_attr');
