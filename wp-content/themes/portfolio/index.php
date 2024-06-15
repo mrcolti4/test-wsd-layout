@@ -19,16 +19,19 @@
   <section class="about container">
     <div class="about__content">
       <div class="about__descr">
-        <h2 class="about__heading heading heading-2">Superstar SEO</h2>
+        <h2 class="about__heading heading heading-2"><?php the_field("about_title"); ?></h2>
         <p class="about__text text text-default">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam amet,
-          platea diam rhoncus, sem tortor, turpis ac tincidunt. Nisi adipiscing a
-          suspendisse justo eleifend volutpat et vitae ac. Consequat in mi iaculis
-          hendrerit mauris mattis. Lacus risus amet at magna urna. Felis nec orci
-          a, quis nullam vel sem nunc enim. Sit mi tellus eget commodo augue.
+          <?php the_field("about_description"); ?>
         </p>
       </div>
-      <img src="<?php echo bloginfo('template_url') ?>/assets/img/devices.png" alt="Computer devices" class="about__img" />
+      <?php
+      $image = get_field("about_img");
+      if ($image):
+        ?>
+        <img class="about__img" src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
+        <?php
+      endif;
+      ?>
     </div>
   </section>
 
