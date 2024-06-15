@@ -55,63 +55,52 @@
         </div>
       </div>
       <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide swiper__slide slide">
-            <div class="slide__content">
-              <img src="<?php echo bloginfo('template_url') ?>/assets/img/slide-1.png" alt="" class="slide__img" />
-              <div class="slide__descr">
-                <p class="slide__text text text-italic">
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Adipiscing diam, tortor, egestas euismod neque venenatis,
-                  viverra. Ante nibh morbi egestas quam lorem ipsum. Eget sit
-                  praesent a laoreet. Mi, phasellus quis mauris sollicitudin non.
-                  Iaculis ac duis mauris enim. “
-                </p>
-                <div class="slide__info">
-                  <p class="slide__name text text-bold">Frank Hardy</p>
-                  <p class="slide__job-title">Your Marketing Crew CEO</p>
+        <ul class="swiper-wrapper">
+          <?php
+          $posts = get_posts(
+            array(
+              'numberposts' => -1,
+              'category_name' => 'feedback-slider',
+              'orderby' => 'date',
+              'order' => 'ASC',
+              'post_type' => 'post',
+              'suppress_filters' => true
+            )
+          );
+
+          foreach ($posts as $post) {
+            setup_postdata($post);
+            ?>
+            <li class="swiper-slide swiper__slide slide">
+              <div class="slide__content">
+                <?php
+                $image = get_field("slide_image");
+                if ($image):
+                  ?>
+                  <img class="slide__img" src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
+                  <?php
+                endif;
+                ?>
+                <div class="slide__descr">
+                  <p class="slide__text text text-italic">
+                    <?php the_field("slide_description") ?>
+                  </p>
+                  <div class="slide__info">
+                    <p class="slide__name text text-bold">
+                      <?php the_field("slide_name") ?>
+                    </p>
+                    <p class="slide__job-title">
+                      <?php the_field("slide_job_title") ?>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="swiper-slide swiper__slide slide">
-            <div class="slide__content">
-              <img src="<?php echo bloginfo('template_url') ?>/assets/img/slide-2.webp" alt="" class="slide__img" />
-              <div class="slide__descr">
-                <p class="slide__text text text-italic">
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Adipiscing diam, tortor, egestas euismod neque venenatis,
-                  viverra. Ante nibh morbi egestas quam lorem ipsum. Eget sit
-                  praesent a laoreet. Mi, phasellus quis mauris sollicitudin non.
-                  Iaculis ac duis mauris enim. “
-                </p>
-                <div class="slide__info">
-                  <p class="slide__name text text-bold">Frank Hardy</p>
-                  <p class="slide__job-title">Your Marketing Crew CEO</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide swiper__slide slide">
-            <div class="slide__content">
-              <img src="<?php echo bloginfo('template_url') ?>/assets/img/slide-3.png" alt="" class="slide__img" />
-              <div class="slide__descr">
-                <p class="slide__text text text-italic">
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Adipiscing diam, tortor, egestas euismod neque venenatis,
-                  viverra. Ante nibh morbi egestas quam lorem ipsum. Eget sit
-                  praesent a laoreet. Mi, phasellus quis mauris sollicitudin non.
-                  Iaculis ac duis mauris enim. “
-                </p>
-                <div class="slide__info">
-                  <p class="slide__name text text-bold">Frank Hardy</p>
-                  <p class="slide__job-title">Your Marketing Crew CEO</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          ...
-        </div>
+            </li>
+            <?php
+          }
+          wp_reset_postdata();
+          ?>
+        </ul>
         <div class="swiper-pagination"></div>
       </div>
     </div>
@@ -125,18 +114,9 @@
           <address class="touch__address">237 Haylee Islands Suite 960</address>
         </div>
       </div>
-      <form class="touch__form form">
-        <input required type="text" placeholder="Name" name="name" class="form__input text text-default" />
-        <input required type="email" placeholder="Email" name="email" class="form__input text text-default" />
-        <textarea required class="form__input form__textarea" name="message"
-          placeholder="Write something..."></textarea>
-        <button type="submit" class="btn form__btn">
-          <svg class="form__icon" width="20" height="20">
-            <use href="<?php echo bloginfo('template_url') ?>/assets/img/icons/icons.svg#mail"></use>
-          </svg>
-          Send message
-        </button>
-      </form>
+      <div class="form">
+        <?php echo do_shortcode('[contact-form-7 id="212a77d" title="Get in touch form" html_class="touch__form"]') ?>
+      </div>
     </div>
   </section>
 

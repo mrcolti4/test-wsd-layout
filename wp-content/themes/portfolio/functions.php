@@ -47,3 +47,10 @@ function filter_nav_menu_link_attributes($atts, $item, $args) {
 	};
 	return $atts;
 }
+
+// Add custom class to form wrapper
+function custom_form_class_attr($class) {
+    $class .= ' form';
+    return $class;
+}
+add_filter('wpcf7_form_class_attr', 'custom_form_class_attr');
