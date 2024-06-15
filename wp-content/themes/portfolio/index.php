@@ -43,14 +43,10 @@
         </h2>
         <div class="swiper__buttons">
           <button type="button" class="swiper-button swiper-button-prev-unique btn-arrow">
-            <svg class="swiper-icon" width="20" height="20">
-              <use href="<?php echo bloginfo('template_url') ?>/assets/img/icons/icons.svg#arrow-right"></use>
-            </svg>
+            <i class="fa-solid fa-arrow-left swiper-icon"></i>
           </button>
           <button type="button" class="swiper-button swiper-button-next-unique btn-arrow">
-            <svg class="swiper-icon" width="20" height="20">
-              <use href="<?php echo bloginfo('template_url') ?>/assets/img/icons/icons.svg#arrow-right"></use>
-            </svg>
+            <i class="fa-solid fa-arrow-right swiper-icon"></i>
           </button>
         </div>
       </div>
