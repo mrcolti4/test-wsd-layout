@@ -1,6 +1,9 @@
 <footer class="footer">
     <div class="container">
-        <?php echo the_custom_logo(0); ?>
+        <img src="<?php
+        $custom_logo_url = wp_get_attachment_image_src(get_theme_mod("custom_logo"), 'full');
+        echo $custom_logo_url[0];
+        ?>" alt="John Doe" class="footer__logo" />
         <nav class="footer__navigation">
             <ul class="footer__menu menu">
                 <li class="menu__item">

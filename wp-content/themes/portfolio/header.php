@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <?php wp_head() ?>
-    <title>John Doe - Superstar SEO</title>
+    <title><?php bloginfo('name');
+    echo " | ";
+    bloginfo("description"); ?></title>
 </head>
 
 <body>
@@ -19,8 +21,13 @@
                 <span></span>
             </div>
             <nav class="header__navigation">
-                <?php echo the_custom_logo(0); ?>
-                <ul class="header__menu menu">
+                <a class="header__logo logo" href="#">
+                    <img src="<?php
+                    $custom_logo_url = wp_get_attachment_image_src(get_theme_mod("custom_logo"), 'full');
+                    echo $custom_logo_url[0];
+                    ?>" alt="John Doe" />
+                </a>
+                <!-- <ul class="header__menu menu">
                     <li class="menu__item">
                         <a href="" class="menu__link">Home</a>
                     </li>
@@ -49,7 +56,9 @@
                     <li class="menu__item">
                         <a href="" class="menu__link">Contact</a>
                     </li>
-                </ul>
+                </ul> -->
+                <?php wp_nav_menu(array('theme_location' => 'header-menu')); ?>
+
             </nav>
         </div>
     </header>
