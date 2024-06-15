@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="container">
-        <img src="<?php echo bloginfo('template_url') ?>/assets/img/logo.png" alt="logo" class="footer__logo" />
+        <?php echo the_custom_logo(0); ?>
         <nav class="footer__navigation">
             <ul class="footer__menu menu">
                 <li class="menu__item">

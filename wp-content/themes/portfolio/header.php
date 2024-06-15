@@ -19,9 +19,7 @@
                 <span></span>
             </div>
             <nav class="header__navigation">
-                <a class="header__logo logo" href="#">
-                    <img src="<?php echo bloginfo('template_url') ?>/assets/img/logo.png" alt="Logo" />
-                </a>
+                <?php echo the_custom_logo(0); ?>
                 <ul class="header__menu menu">
                     <li class="menu__item">
                         <a href="" class="menu__link">Home</a>
