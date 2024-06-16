@@ -5,14 +5,14 @@
     <div class="hero-container container">
       <div class="hero__content">
         <div class="hero__descr">
-          <h1 class="hero__heading heading heading-1">John Doe</h1>
+          <h1 class="hero__heading heading heading-1"><?php the_field("hero_title"); ?></h1>
           <p class="hero__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dolor
-            magna risus sed. Et dictumst vel.
+            <?php the_field("hero_description"); ?>
           </p>
           <button class="hero__btn btn">Free Seo Consulting Training</button>
         </div>
-        <img src="<?php echo bloginfo('template_url') ?>/assets/img/hero-img.png" alt="" class="hero__img" />
+        
+        <img src="<?php echo the_field("hero_image");?>" alt="John Doe" class="hero__img" />
       </div>
     </div>
   </section>
@@ -106,8 +106,9 @@
       <div class="touch__descr">
         <h2 class="touch__heading heading heading-2">Get in Touch</h2>
         <div class="touch__info">
-          <a class="touch__email" href="mailto:hello@domainexample.com">hello@domainexample.com</a>
-          <address class="touch__address">237 Haylee Islands Suite 960</address>
+          <a class="touch__email"
+            href="mailto:<?php the_field("contact_email") ?>"><?php the_field("contact_email") ?></a>
+          <address class="touch__address"><?php the_field("contact_address") ?></address>
         </div>
       </div>
       <div class="form">
