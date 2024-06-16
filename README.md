@@ -6,6 +6,7 @@ This repository contains the code for a WordPress site using the following plugi
 
 - [Installation](#installation)
 - [Branches](#branches)
+- [Directories](#directories)
 - [Plugins](#plugins)
 
 ## Installation
@@ -27,7 +28,7 @@ The repository is organized into two branches:
 
 The repository includes the following important directories:
 
-1. **wp-content/plugins**: This directory contains the WordPress [Plugins](#plugins) plugins used in the project.
+1. **wp-content/plugins**: This directory contains the WordPress [plugins](#plugins) used in the project.
 
 2. **wp-content/themes/portfolio**: This directory contains the custom theme `portfolio`. This theme includes styles, and scripts for the website.
 
