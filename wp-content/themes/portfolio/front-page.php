@@ -9,7 +9,7 @@
           <p class="hero__text">
             <?php the_field("hero_description"); ?>
           </p>
-          <button class="hero__btn btn">Free Seo Consulting Training</button>
+          <button class="hero__btn btn" data-url="<?php the_field("hero_button_link") ?>">Free Seo Consulting Training</button>
         </div>
         
         <img src="<?php echo the_field("hero_image");?>" alt="John Doe" class="hero__img" />
