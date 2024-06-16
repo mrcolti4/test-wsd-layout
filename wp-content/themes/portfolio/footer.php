@@ -5,23 +5,13 @@
         echo $custom_logo_url[0];
         ?>" alt="John Doe" class="footer__logo" />
         <nav class="footer__navigation">
-            <ul class="footer__menu menu">
-                <li class="menu__item">
-                    <a href="" class="menu__link">Home</a>
-                </li>
-                <li class="menu__item">
-                    <a href="" class="menu__link">About</a>
-                </li>
-                <li class="menu__item">
-                    <a href="" class="menu__link">Products</a>
-                </li>
-                <li class="menu__item">
-                    <a href="" class="menu__link">Testimonials</a>
-                </li>
-                <li class="menu__item">
-                    <a href="" class="menu__link">Contacts</a>
-                </li>
-            </ul>
+            <?php wp_nav_menu(
+                array(
+                    'theme_location' => 'footer-menu',
+                    'add_li_class' => 'menu__item'
+                )
+            );
+            ?>
         </nav>
         <p class="footer__copyrights">Copyright © 2021 All right reserved</p>
     </div>

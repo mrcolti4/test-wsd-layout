@@ -66,13 +66,11 @@ function custom_add_submenu_class($classes)
 }
 add_filter('nav_menu_css_class', 'custom_add_submenu_class', 10, 1);
 
-add_filter('nav_menu_link_attributes', "filter_nav_menu_link_attributes", 10, 3);
-function filter_nav_menu_link_attributes($atts, $item, $args)
+// Add custom class to menus
+add_filter('nav_menu_link_attributes', "filter_nav_menu_link_attributes", 10, 1);
+function filter_nav_menu_link_attributes($atts)
 {
-	if ($args->menu->name === "Header menu") {
-		$atts['class'] = 'menu__link';
-	}
-	;
+	$atts['class'] = 'menu__link';
 	return $atts;
 }
 add_theme_support("widgets");

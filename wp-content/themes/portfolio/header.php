@@ -30,7 +30,8 @@
                 <?php wp_nav_menu(
                     array(
                         'theme_location' => 'header-menu',
-                        'add_li_class' => 'menu__item'
+                        'add_li_class' => 'menu__item',
+                        'depth' => 2
                     )
                 );
                 ?>
