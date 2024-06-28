@@ -1,33 +1,32 @@
 .touch {
-  padding: 120px 0;
+  padding: 120px 0 114px;
   background-color: #f5f9fa;
   @media screen and (max-width: 992px) {
     padding: 50px 0;
   }
   &__container {
-    display: grid;
-  }
-  &__descr {
-    display: grid;
-    @media screen and (min-width: 992px) {
-      grid-column: 2;
+    display: flex;
+    justify-content: center;
+    gap: 190px;
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
     }
   }
-  &__heading {
-    margin-bottom: auto;
-    grid-row: 1;
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   &__info {
-    grid-row: 3;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     gap: 10px;
-    align-self: end;
   }
   &__email {
     color: $accent_color;
+    font-size: 20px;
   }
   &__address {
     font-size: 20px;
@@ -43,21 +42,17 @@
   flex-direction: column;
   gap: 20px;
   width: 570px;
-
+  margin-right: 20px;
   @media screen and (max-width: 768px) {
     width: 100%;
   }
 
-  @media screen and (min-width: 992px) {
-    grid-column: 4;
-  }
   &__input {
     border-radius: 6px;
     border: solid 1px #c9ccd4;
     padding: 18px 0 18px 24px;
   }
   &__textarea {
-    resize: none;
     height: 132px;
   }
   input,
@@ -87,12 +82,7 @@
 
 @media screen and (max-width: 992px) {
   .touch {
-    &__container {
-      row-gap: 20px;
-      grid-template-columns: repeat(1, 1fr);
-    }
     &__descr {
-      grid-row: 2 / 2;
       width: 100%;
     }
     &__heading {
@@ -103,7 +93,6 @@
     }
   }
   .form {
-    grid-row: 3 / 6;
     margin: 0 auto;
     &__btn {
       width: 100%;

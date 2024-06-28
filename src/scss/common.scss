@@ -1,5 +1,6 @@
 body {
   font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
 }
 
 ul {
@@ -55,6 +56,9 @@ img {
     font-size: 70px;
     line-height: calc(82 / 70);
   }
+  &-3 {
+    font-size: 60px;
+  }
   @media screen and (max-width: 1200px) {
     &-2 {
       font-size: 50px;
@@ -93,7 +97,7 @@ img {
 .btn {
   box-sizing: border-box;
   background-color: $accent_color;
-  padding: 20px 61px;
+  padding: 18px 63.5px;
   border-radius: 41px;
   border: none;
   color: #fff;
@@ -105,7 +109,7 @@ img {
       background-color: $btn-focus-color;
     }
   }
-  &:focus {
+  &:active {
     outline: solid 2px $btn-focus-color;
     background-color: $accent_color;
     box-shadow: 0 0 0 4px #69ae96;
@@ -134,7 +138,7 @@ img {
       }
     }
   }
-  &:focus {
+  &:active {
     border: solid 2px $btn-focus-color;
     background-color: $accent_color;
     box-shadow: 0 0 0 4px #69ae96;

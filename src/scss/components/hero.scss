@@ -14,8 +14,8 @@
   &__content {
     position: relative;
     display: flex;
+    padding: 15px 130px 0;
     align-items: center;
-    padding: 0 140px 0;
     z-index: 1;
     height: 100%;
     @media screen and (max-width: 992px) {
@@ -33,13 +33,16 @@
   &__text {
     margin-bottom: 40px;
     font-size: 20px;
+    letter-spacing: 0.4px;
+  }
+  &__btn {
     line-height: 1.5;
   }
   &__img {
     z-index: -1;
     position: absolute;
-    right: 0;
-    bottom: -30%;
+    right: -48px;
+    bottom: -29%;
     @media screen and (max-width: 1200px) {
       right: -10%;
       width: 60%;
