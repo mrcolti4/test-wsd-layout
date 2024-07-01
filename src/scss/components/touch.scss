@@ -7,10 +7,13 @@
   &__container {
     display: flex;
     justify-content: center;
-    gap: 190px;
+    gap: clamp(1.25rem, -4.063rem + 13.28vw, 11.875rem);
     @media screen and (max-width: 992px) {
       flex-direction: column;
     }
+  }
+  &__heading {
+    text-align: center;
   }
   &__descr {
     display: flex;
@@ -41,7 +44,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 570px;
+  width: clamp(28.125rem, 24.375rem + 9.38vw, 35.625rem) ;
   margin-right: 20px;
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -59,8 +62,8 @@
   textarea {
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 2px #69ae96;
-      border: solid 1px #3b7a64;
+      border: 1px solid #3b7a64;
+      outline: solid 4px rgba(105, 174, 150, 0.3);
     }
   }
   &__error {

@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 305px;
+    padding: 0 clamp(3.125rem, -4.844rem + 19.92vw, 19.063rem) ;
   }
 }
 
